@@ -17,7 +17,6 @@ import com.ctre.phoenix6.swerve.*;
 import com.ctre.phoenix6.swerve.SwerveModuleConstants.*;
 import com.revrobotics.spark.config.SparkBaseConfig;
 import com.revrobotics.spark.config.SparkMaxConfig;
-
 import edu.wpi.first.math.Matrix;
 import edu.wpi.first.math.numbers.N1;
 import edu.wpi.first.math.numbers.N3;
@@ -328,8 +327,8 @@ public class TunerConstants {
 
   public static final class IntakeTunables {
     public static final SparkBaseConfig INTAKE_LEAD_MOTOR_CONFIG =
-                new SparkMaxConfig().smartCurrentLimit(35).idleMode(SparkBaseConfig.IdleMode.kBrake);
+        new SparkMaxConfig().smartCurrentLimit(35).idleMode(SparkBaseConfig.IdleMode.kBrake);
     public static final int INTAKE_EXTEND_SPEED = 0;
     public static final int INTAKE_RETRACT_SPEED = -0;
-    }
+  }
 }
