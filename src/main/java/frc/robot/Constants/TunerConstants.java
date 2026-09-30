@@ -351,5 +351,10 @@ public class TunerConstants {
         .smartCurrentLimit(35)
         .idleMode(SparkBaseConfig.IdleMode.kBrake);
     
+  public static final class IntakeTunables {
+    public static final SparkBaseConfig INTAKE_LEAD_MOTOR_CONFIG =
+        new SparkMaxConfig().smartCurrentLimit(35).idleMode(SparkBaseConfig.IdleMode.kBrake);
+    public static final int INTAKE_EXTEND_SPEED = 0;
+    public static final int INTAKE_RETRACT_SPEED = -0;
   }
 }
