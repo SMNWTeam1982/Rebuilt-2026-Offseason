@@ -42,6 +42,7 @@ import edu.wpi.first.wpilibj2.command.sysid.SysIdRoutine;
 import frc.robot.Constants.Constants;
 import frc.robot.Constants.Constants.Mode;
 import frc.robot.Constants.TunerConstants;
+import frc.robot.subsystems.drive.GyroIOInputsAutoLogged;
 import frc.robot.util.LocalADStarAK;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
