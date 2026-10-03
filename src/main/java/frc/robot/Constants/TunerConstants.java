@@ -242,6 +242,8 @@ public class TunerConstants {
               kInvertRightSide,
               kBackRightSteerMotorInverted,
               kBackRightEncoderInverted);
+public static final SparkBaseConfig SHOOTER_LEAD_MOTOR_CONFIG = null;
+public static final SparkBaseConfig SHOOTER_FOLLOWER_MOTOR_CONFIG = null;
 
   /**
    * Creates a CommandSwerveDrivetrain instance. This should only be called once in your robot
@@ -327,13 +329,26 @@ public class TunerConstants {
 
   public static final class ShooterTunables {
 
-    public static final SparkBaseConfig SHOOTER_LEAD_MOTOR_CONFIG =
-        new SparkMaxConfig().smartCurrentLimit(35).idleMode(SparkBaseConfig.IdleMode.kBrake);
+    public static final AngularVelocity SPEED_OVERRIDE_1 = RPM.of(0);
+     public static final AngularVelocity SPEED_OVERRIDE_2 = RPM.of(2500);
+     public static final AngularVelocity SPEED_OVERRIDE_3 = RPM.of(3500);
+     public static final AngularVelocity SPEED_OVERRIDE_4 = RPM.of(4500);
+     public static final double FLYWHEEL_RPM_TOLERANCE = 300.0;
+
+        public static final double FLYWHEEL_IDLE_RPM = 1000.0;
+
+        public static final AngularVelocity FLYWHEEL_REVERSE_RPM = RPM.of(-2000.0);
+
+        public static final double SHOOTER_RPM_CEILING = 5500;
+
   }
 
   public static final class IntakeTunables {
     public static final SparkBaseConfig INTAKE_LEAD_MOTOR_CONFIG =
-        new SparkMaxConfig().smartCurrentLimit(35).idleMode(SparkBaseConfig.IdleMode.kBrake);
+        new SparkMaxConfig()
+        .smartCurrentLimit(35)
+        .idleMode(SparkBaseConfig.IdleMode.kBrake);
+
     public static final int INTAKE_EXTEND_SPEED = 0;
     public static final int INTAKE_RETRACT_SPEED = -0;
   }

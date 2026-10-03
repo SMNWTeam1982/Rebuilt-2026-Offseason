@@ -18,6 +18,7 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.sysid.SysIdRoutine;
 import frc.robot.Constants.Constants;
 import frc.robot.Constants.TunerConstants;
+import frc.robot.Constants.TunerConstants.ShooterTunables;
 import frc.robot.commands.DriveCommands;
 import frc.robot.subsystems.drive.Drive;
 import frc.robot.subsystems.drive.GyroIO;
@@ -25,6 +26,8 @@ import frc.robot.subsystems.drive.GyroIOPigeon2;
 import frc.robot.subsystems.drive.ModuleIO;
 import frc.robot.subsystems.drive.ModuleIOSim;
 import frc.robot.subsystems.drive.ModuleIOTalonFX;
+import frc.robot.subsystems.drive.shooter.ShooterSubsystem;
+
 import org.littletonrobotics.junction.networktables.LoggedDashboardChooser;
 
 /**
@@ -36,9 +39,11 @@ import org.littletonrobotics.junction.networktables.LoggedDashboardChooser;
 public class RobotContainer {
   // Subsystems
   private final Drive drive;
+  private final ShooterSubsystem shooter = new ShooterSubsystem();
 
   // Controller
   private final CommandXboxController controller = new CommandXboxController(0);
+  private final CommandXboxController operatorController = new CommandXboxController(1);
 
   // Dashboard inputs
   private final LoggedDashboardChooser<Command> autoChooser;
@@ -120,7 +125,8 @@ public class RobotContainer {
         "Drive SysId (Dynamic Reverse)", drive.sysIdDynamic(SysIdRoutine.Direction.kReverse));
 
     // Configure the button bindings
-    configureButtonBindings();
+    configureDriveBindings();
+    configureOperatorBindings();
   }
 
   /**
@@ -129,7 +135,7 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj.Joystick} or {@link XboxController}), and then passing it to a {@link
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
-  private void configureButtonBindings() {
+  private void configureDriveBindings() {
     // Default command, normal field-relative drive
     drive.setDefaultCommand(
         DriveCommands.joystickDrive(
@@ -163,6 +169,20 @@ public class RobotContainer {
                 .ignoringDisable(true));
   }
 
+  private void configureOperatorBindings() {
+
+
+
+
+
+    // SHOOTER BINDINGS
+    operatorController.povRight().debounce(.05).onTrue(shooter.run(ShooterTunables.SPEED_OVERRIDE_1));
+    operatorController.povDown().debounce(.05).onTrue(shooter.run(ShooterTunables.SPEED_OVERRIDE_2));
+    operatorController.povLeft().debounce(.05).onTrue(shooter.run(ShooterTunables.SPEED_OVERRIDE_3));
+    operatorController.povUp().debounce(.05).onTrue(shooter.run(ShooterTunables.SPEED_OVERRIDE_4));
+    
+
+  }
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.
    *
