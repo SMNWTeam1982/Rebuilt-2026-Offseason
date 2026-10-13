@@ -136,7 +136,7 @@ public class RobotContainer {
             drive,
             () -> -controller.getLeftY(),
             () -> -controller.getRightX(),
-            () -> .1)); // 10% deadband
+            () -> -controller.getRightX()));
 
     // Lock to 0° when A button is held
     // controller
