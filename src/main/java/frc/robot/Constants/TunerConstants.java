@@ -335,11 +335,12 @@ public static final SparkBaseConfig SHOOTER_FOLLOWER_MOTOR_CONFIG = null;
      public static final AngularVelocity SPEED_OVERRIDE_4 = RPM.of(4500);
      public static final double FLYWHEEL_RPM_TOLERANCE = 300.0;
 
-        public static final double FLYWHEEL_IDLE_RPM = 1000.0;
+    public static final double FLYWHEEL_IDLE_RPM = 1000.0;
 
-        public static final AngularVelocity FLYWHEEL_REVERSE_RPM = RPM.of(-2000.0);
+    public static final AngularVelocity FLYWHEEL_REVERSE_RPM = RPM.of(-2000.0);
 
-        public static final double SHOOTER_RPM_CEILING = 5500;
+    public static final double SHOOTER_RPM_CEILING = 5500;
+    public static final double FLYWHEEL_MOTOR_JAM_CURRENT_THRESHHOLD = 30.0;
 
   }
 
