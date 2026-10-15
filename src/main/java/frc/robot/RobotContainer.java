@@ -45,6 +45,7 @@ public class RobotContainer {
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
+
     switch (Constants.currentMode) {
       case REAL:
         // Real robot, instantiate hardware IO implementations
@@ -135,7 +136,7 @@ public class RobotContainer {
         DriveCommands.joystickDrive(
             drive,
             () -> -controller.getLeftY(),
-            () -> -controller.getRightX(),
+            () -> -controller.getLeftX(),
             () -> -controller.getRightX()));
 
     // Lock to 0° when A button is held
