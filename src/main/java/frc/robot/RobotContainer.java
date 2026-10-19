@@ -171,10 +171,6 @@ public class RobotContainer {
 
   private void configureOperatorBindings() {
 
-
-
-
-
     // SHOOTER BINDINGS
     operatorController.povRight().debounce(.05).onTrue(shooter.run(ShooterTunables.SPEED_OVERRIDE_1));
     operatorController.povDown().debounce(.05).onTrue(shooter.run(ShooterTunables.SPEED_OVERRIDE_2));
