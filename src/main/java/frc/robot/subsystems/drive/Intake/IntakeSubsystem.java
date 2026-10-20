@@ -41,6 +41,10 @@ public class IntakeSubsystem extends SubsystemBase {
         });
   }
 
+  public Command stopIntake() {
+    return runOnce(() -> IntakeMotor.set(0));
+  }
+
   public Command feedIntakeOut() {
     return startEnd(
         () -> {
