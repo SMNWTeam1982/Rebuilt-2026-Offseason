@@ -335,8 +335,5 @@ public class TunerConstants {
         new SparkMaxConfig().smartCurrentLimit(35).idleMode(SparkBaseConfig.IdleMode.kBrake);
     public static final int INTAKE_EXTEND_SPEED = 0;
     public static final int INTAKE_RETRACT_SPEED = -0;
-
-    public static final int INTAKE_FEED_IN_SPEED = 0;
-    public static final int INTAKE_FEED_OUT_SPEED = -0;
   }
 }
