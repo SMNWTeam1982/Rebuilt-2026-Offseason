@@ -19,7 +19,6 @@ import edu.wpi.first.wpilibj2.command.sysid.SysIdRoutine;
 import frc.robot.Constants.Constants;
 import frc.robot.Constants.TunerConstants;
 import frc.robot.Constants.TunerConstants.ShooterTunables;
-import frc.robot.Constants.CANBus.ShooterIDs;
 import frc.robot.commands.DriveCommands;
 import frc.robot.subsystems.drive.Drive;
 import frc.robot.subsystems.drive.GyroIO;
@@ -28,7 +27,6 @@ import frc.robot.subsystems.drive.ModuleIO;
 import frc.robot.subsystems.drive.ModuleIOSim;
 import frc.robot.subsystems.drive.ModuleIOTalonFX;
 import frc.robot.subsystems.drive.shooter.ShooterSubsystem;
-
 import org.littletonrobotics.junction.networktables.LoggedDashboardChooser;
 
 /**
