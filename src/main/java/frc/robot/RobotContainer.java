@@ -39,7 +39,7 @@ public class RobotContainer {
 
   // Controller
   private final CommandXboxController controller = new CommandXboxController(0);
-
+  private final CommandXboxController operatorController = new CommandXboxController(0);
   // Dashboard inputs
   private final LoggedDashboardChooser<Command> autoChooser;
 
@@ -123,6 +123,17 @@ public class RobotContainer {
     configureButtonBindings();
   }
 
+
+  private void configureOperatorBindings() {
+
+    // SHOOTER BINDINGS
+    operatorController.povRight().debounce(.05).onTrue(shooter.run(ShooterTunables.SPEED_OVERRIDE_1));
+    operatorController.povDown().debounce(.05).onTrue(shooter.run(ShooterTunables.SPEED_OVERRIDE_2));
+    operatorController.povLeft().debounce(.05).onTrue(shooter.run(ShooterTunables.SPEED_OVERRIDE_3));
+    operatorController.povUp().debounce(.05).onTrue(shooter.run(ShooterTunables.SPEED_OVERRIDE_4));
+    
+
+  }
   /**
    * Use this method to define your button->command mappings. Buttons can be created by
    * instantiating a {@link GenericHID} or one of its subclasses ({@link
@@ -162,6 +173,11 @@ public class RobotContainer {
                     drive)
                 .ignoringDisable(true));
   }
+
+
+
+
+
 
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.
