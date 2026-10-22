@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.CANBus.IntakeIDs;
 import frc.robot.Constants.TunerConstants;
-import frc.robot.Constants.TunerConstants.IntakeTunables;;
+import frc.robot.Constants.TunerConstants.IntakeTunables;
 
 public class IntakeSubsystem extends SubsystemBase {
   private final SparkMax leadIntakeMotor =
