@@ -349,4 +349,9 @@ public class TunerConstants {
     public static final int INTAKE_FEED_IN_SPEED = 0;
     public static final int INTAKE_FEED_OUT_SPEED = -0;
   }
+
+  public static final class FeederTunables {
+    public static final double ACTIVE_FEEDER_SPEED = 0;
+    public static final double IDLE_FEEDER_SPEED = 0;
+  }
 }
