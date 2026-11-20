@@ -7,8 +7,8 @@ public class CANBus {
   }
 
   public static final class IntakeIDs {
-    public static final int LEAD_INTAKE_MOTORID = 0;
-    public static final int FOLLOWER_INTAKE_MOTORID = 0;
+    public static final int LEAD_INTAKE_MOTORID = 18;
+    public static final int FOLLOWER_INTAKE_MOTORID = 19;
     public static final int INTAKE_MOTORID = 0;
   }
 }
